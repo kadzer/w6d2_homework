@@ -8,7 +8,7 @@ const Task = require('../task.js')
 
 describe('Task', function(){
   beforeEach(function(){
-    task = new Task('easy','low','three fiddy');
+    task = new Task('easy','low','three fiddy', 1);
   });
   it('should have a difficulty level', function(){
     const actual = task.difficulty;
@@ -21,5 +21,9 @@ describe('Task', function(){
   it('should have a reward', function(){
     const actual = task.reward;
     assert.strictEqual(actual, 'three fiddy')
+  });
+  it('should have a completion status', function(){
+    const actual = task.completed;
+    assert.strictEqual(actual, 1)
   });
 })
