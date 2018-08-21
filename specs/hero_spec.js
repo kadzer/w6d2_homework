@@ -24,4 +24,8 @@ describe('Hero', function(){
     const actual = hero.favfood;
     assert.strictEqual(actual, 'chicken')
   });
+  it('should itroduce themselves', function(){
+    const actual = hero.introduce();
+    assert.strictEqual(actual, 'Hey, I\'m Leeroy Jenkins!')
+  });
 })
