@@ -1,7 +1,8 @@
-const Hero = function(name, health, favfood){
+const Hero = function(name, health, favfood, tasks){
   this.name = name;
   this.health = health;
   this.favfood = favfood;
+  this.tasks = [];
 }
 
 Hero.prototype.introduce = function () {
