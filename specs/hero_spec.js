@@ -1,16 +1,11 @@
 const assert = require('assert')
 const Hero = require('../hero.js')
-
-
-// + A Hero has a name
-// + A Hero has health
-// + A Hero has a favourite food
-// + A Hero can talk saying their name
-// + A Hero has a collection of tasks to complete
+const Food = require('../food.js')
 
 describe('Hero', function(){
   beforeEach(function(){
     hero = new Hero('Leeroy Jenkins', 100, 'chicken');
+    food = new Food('chicken', 25);
   });
   it('should have a name', function(){
     const actual = hero.name;
@@ -32,5 +27,10 @@ describe('Hero', function(){
     hero.tasks.push("gather food")
     const actual = hero.tasks.length;
     assert.strictEqual(actual, 1)
+  });
+  it('should be able to replenish health by eating food', function(){
+    hero.eatFood(food);
+    const actual = hero.health;
+    assert.strictEqual(actual, 125)
   });
 })
