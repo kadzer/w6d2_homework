@@ -15,4 +15,8 @@ Hero.prototype.eatFood = function(food) {
   }
   else {this.health += food.replenish};
 };
+
+Hero.prototype.sortTasksByDifficulty = function () {
+
+};
 module.exports = Hero;
