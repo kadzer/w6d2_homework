@@ -5,7 +5,7 @@ const Food = require('../food.js')
 describe('Hero', function(){
   beforeEach(function(){
     hero = new Hero('Leeroy Jenkins', 100, 'chicken');
-    food = new Food('chicken', 25);
+    food = new Food('chicken', 20);
   });
   it('should have a name', function(){
     const actual = hero.name;
@@ -31,6 +31,6 @@ describe('Hero', function(){
   it('should be able to replenish health by eating food', function(){
     hero.eatFood(food);
     const actual = hero.health;
-    assert.strictEqual(actual, 125)
+    assert.strictEqual(actual, 130)
   });
 })

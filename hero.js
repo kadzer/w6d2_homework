@@ -10,6 +10,9 @@ Hero.prototype.introduce = function() {
 };
 
 Hero.prototype.eatFood = function(food) {
-  this.health += food.replenish
+  if (this.favfood === food.name) {
+    this.health += food.replenish * 1.5;
+  }
+  else {this.health += food.replenish};
 };
 module.exports = Hero;
